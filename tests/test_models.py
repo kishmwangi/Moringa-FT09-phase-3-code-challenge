@@ -9,7 +9,7 @@ class TestModels(unittest.TestCase):
         self.assertEqual(author.name, "John Doe")
 
     def test_article_creation(self):
-        article = Article(1, "Test Title", "Test Content", 1, 1)
+        article = Article(1, 1, "Test Title")  # Adjusted to pass only author_id, magazine_id, and title
         self.assertEqual(article.title, "Test Title")
 
     def test_magazine_creation(self):
